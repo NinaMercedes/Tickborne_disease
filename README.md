@@ -1,4 +1,4 @@
-# Tickborne_disease
+# Tickborne Diseases
 Quick pipeline/ notes to process bacterial genome data to find genomic regions for amplicon sequencing... Example for Rickettsia sp. 
 First compiles list of WGS, Illumina samples for Rickettsia spp. and pop them into samples.txt file.
 
