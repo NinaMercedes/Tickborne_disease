@@ -19,10 +19,14 @@ shovill --check
 
 ```
 ## A Quick Assembly: Shovill
+Let's use an example file to test the makeshift pipeline...
 
-
-for file in *_1.fastq.gz; do tag=${file%_1.fastq.gz}:
-shovill --trim ON --gsize 5.5M --outdir “$tag” --R1
-“$tag”_1.fastq.gz --R2 “$tag”_ 2.fastq.gz; done
-
+```
+cd ~/Rickettsia/example
+mkdir shovill_out
+cd ~/Rickettsia
+cat example.txt | xargs -I {} -P 10 sh -c "bash shovill.sh {}"
+# works now let's use the modified script for assembly of all samples we downloaded
+cat samples.txt | xargs -I {} -P 10 sh -c "bash shovill.sh {}"
+```
 
